@@ -46,9 +46,8 @@ export default function TableCustom({ rows }: TableProps) {
     })
 
     return (
-        <>
-            <h1>Lista</h1>
+        <div className="p-2 my-2">
             <Table dataSource={dataSource} columns={columns} />
-        </>
+        </div>
     )
 }
