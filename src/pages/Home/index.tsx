@@ -3,15 +3,14 @@ import { list } from 'services/api'
 import { Button } from 'antd'
 import Footer from 'components/Footer'
 import Header from 'components/Header'
+import SearchBar from 'components/SearchBar'
 
 function Home() {
     return (
-        <>
-            <Header />
+        <div className="p-4 my-2">
+            <SearchBar />
             <Table rows={list()} />
-
-            <Footer />
-        </>
+        </div>
     )
 }
 
