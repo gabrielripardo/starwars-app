@@ -9,23 +9,22 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "noFallthroughCasesInSwitch": true,
+    "noEmit": true,
+    "incremental": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": false,
-    "jsx": "react-jsx"
+    "jsx": "preserve"
   },
-  "include": [
+  "include": [    
     "**/*.ts",
-    "**/*.tsx", "jest.config.js"  ],
-    "exclude": [
-      "node_modules"
-    ]
-
+    "**/*.tsx"
+, "jest.config.js"  ],
+  "exclude": [
+    "node_modules"
+  ]
 }
