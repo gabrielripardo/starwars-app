@@ -1,4 +1,4 @@
-import { Table, Tag, Space } from 'antd'
+import { Table } from 'antd'
 
 const columns = [
     {
@@ -7,19 +7,27 @@ const columns = [
         key: 'name'
     },
     {
-        title: 'Age',
-        dataIndex: 'age',
-        key: 'age'
+        title: 'Height',
+        dataIndex: 'height',
+        key: 'height'
     },
     {
-        title: 'Address',
-        dataIndex: 'address',
-        key: 'address'
+        title: 'Mass',
+        dataIndex: 'mass',
+        key: 'mass'
+    },
+    {
+        title: 'Skin Color',
+        dataIndex: 'skin_color',
+        key: 'skin_color'
     }
 ]
 
 export type Person = {
     name: string
+    height: string
+    mass: string
+    skin_color: string
 }
 
 export type TableProps = {
@@ -31,8 +39,9 @@ export default function TableCustom({ rows }: TableProps) {
         return {
             key: index,
             name: item.name,
-            age: 32,
-            address: '10 Downing Street'
+            height: item.height,
+            mass: item.mass,
+            skin_color: item.skin_color
         }
     })
 
@@ -40,8 +49,6 @@ export default function TableCustom({ rows }: TableProps) {
         <>
             <h1>Lista</h1>
             <Table dataSource={dataSource} columns={columns} />
-            <button>Previous</button>
-            <button>Next</button>
         </>
     )
 }

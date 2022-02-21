@@ -3,8 +3,7 @@
         "browser": true,
         "es2021": true,
         "jest": true,
-        "node": true,
-        "test": "jest"
+        "node": true        
     },
     "settings":{
         "react": {
