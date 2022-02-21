@@ -1,9 +1,10 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
 import Table from '.'
+import { list } from 'services/api'
 
 const props = {
-    rows: ['row1', 'row2', 'row3']
+    rows: list()
 }
 
 describe('<Table />', () => {
