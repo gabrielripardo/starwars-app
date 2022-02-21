@@ -1,7 +1,8 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
-import Table from '.'
+import Table from '..'
 import { list } from 'services/api'
+import './matchMedia.mock'
 
 const props = {
     rows: list()
