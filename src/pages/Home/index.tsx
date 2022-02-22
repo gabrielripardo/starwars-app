@@ -1,12 +1,7 @@
 import { useState, useEffect } from 'react'
 import Table from 'components/Table'
-import { list } from 'services/api'
-import { Button } from 'antd'
-import Footer from 'components/Footer'
-import Header from 'components/Header'
 import SearchBar from 'components/SearchBar'
-import { getAll, getByName } from 'services/peoples.service'
-import Person from 'types/peoples.type'
+import { getByName } from 'services/peoples.service'
 import { Pagination } from 'antd'
 
 function Home() {
