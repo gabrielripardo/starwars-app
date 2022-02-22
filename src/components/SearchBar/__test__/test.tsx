@@ -24,13 +24,13 @@ describe('<SearchBar />', () => {
         expect(container.firstChild?.firstChild).toHaveStyle({
             width: '500'
         })
-    }),
-        it('should change color to red on toggle click', () => {
-            const { container, getAllByTestId } = render(<SearchBar />)
+    })
+    // it('should change color to red on toggle click', () => {
+    //     const { container, getAllByTestId } = render(<SearchBar />)
 
-            // Replace <YOUR_DIV_ID> by your component's id
-            const contentDiv = document.getElementById('<YOUR_DIV_ID>')
-            const style = window.getComputedStyle(contentDiv[0])
-            expect(style.color).toBe('blue') // Sometimes, only rgb st
-        })
+    //     // Replace <YOUR_DIV_ID> by your component's id
+    //     const contentDiv = document.getElementById('<YOUR_DIV_ID>')
+    //     const style = window.getComputedStyle(contentDiv[0])
+    //     expect(style.color).toBe('blue') // Sometimes, only rgb st
+    // })
 })
