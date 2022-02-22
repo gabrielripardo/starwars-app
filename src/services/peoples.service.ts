@@ -8,9 +8,9 @@ export function getAll() {
         .catch((error: any) => console.log(error))
 }
 
-export function getByName(keyword: string) {
+export function getByName(keyword: string, page: number) {
     return api
-        .get<Array<Person>>(`people?search=${keyword}`)
-        .then((response: any) => response.data.results)
+        .get<Array<Person>>(`people?search=${keyword}&page=${page}`)
+        .then((response: any) => response.data)
         .catch((error: any) => console.log(error))
 }

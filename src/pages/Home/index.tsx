@@ -7,32 +7,45 @@ import Header from 'components/Header'
 import SearchBar from 'components/SearchBar'
 import { getAll, getByName } from 'services/peoples.service'
 import Person from 'types/peoples.type'
+import { Pagination } from 'antd'
 
 function Home() {
     const [persons, setPersons] = useState([])
     const [keyword, setKeyword] = useState('')
+    const [page, setPage] = useState(1)
+    const [totalPages, setTotalPages] = useState(1)
 
     async function retrievePersons() {
-        const results = await getAll()
-        setPersons(results)
-        console.log(results)
+        const data = await getByName(keyword, page)
+        setPersons(data.results)
+        setTotalPages(data.count)
+        console.log(data)
     }
 
-    async function retrievePersonsSearch() {
-        const results = await getByName(keyword)
-        setPersons(results)
-        console.log(results)
+    function changePage(page: number) {
+        console.log(page)
+        setPage(page)
+    }
+
+    const onSearch = (value: string) => {
+        console.log(value)
+        setKeyword(value)
     }
 
     useEffect(() => {
-        if (keyword != '') retrievePersonsSearch()
-        else retrievePersons()
-    }, [keyword])
+        retrievePersons()
+    }, [keyword, page])
 
     return (
         <div className="p-4 my-2">
             <SearchBar setKeyword={setKeyword} />
             <Table rows={persons} />
+            <Pagination
+                defaultCurrent={1}
+                total={totalPages}
+                onChange={changePage}
+                showSizeChanger={false}
+            />
         </div>
     )
 }
