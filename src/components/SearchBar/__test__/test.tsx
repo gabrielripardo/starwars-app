@@ -5,22 +5,22 @@ import SearchBar from '..'
 import { list } from 'services/api'
 import './matchMedia.mock'
 
-const props = {
-    rows: list()
-}
+// const props = {
+//     rows: list()
+// }
 
-describe('<SearchBar />', () => {
-    // it('Deve renderizar corretamente', () => {
-    //     render(<SearchBar />)
+// describe('<SearchBar />', () => {
+//     // it('Deve renderizar corretamente', () => {
+//     //     render(<SearchBar />)
 
-    //     expect(screen.getByRole('input')).toHaveAttribute(
-    //         'placeholder',
-    //         'Search by name'
-    //     )
-    // })
+//     //     expect(screen.getByRole('input')).toHaveAttribute(
+//     //         'placeholder',
+//     //         'Search by name'
+//     //     )
+//     // })
 
-    it('Deve clicar no botão de pesquisa', () => {
-        render(<SearchBar />)
-        userEvent.click(screen.getByRole('button'))
-    })
-})
+//     it('Deve clicar no botão de pesquisa', () => {
+//         render(<SearchBar />)
+//         userEvent.click(screen.getByRole('button'))
+//     })
+// })
