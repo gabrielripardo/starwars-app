@@ -1,5 +1,6 @@
 import React from 'react'
 import { render, screen } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import SearchBar from '..'
 import { list } from 'services/api'
 import './matchMedia.mock'
@@ -18,19 +19,8 @@ describe('<SearchBar />', () => {
     //     )
     // })
 
-    it('Deve renderizar o width corretamente', () => {
-        const { container } = render(<SearchBar />)
-
-        expect(container.firstChild?.firstChild).toHaveStyle({
-            width: '500'
-        })
+    it('Deve clicar no botão de pesquisa', () => {
+        render(<SearchBar />)
+        userEvent.click(screen.getByRole('button'))
     })
-    // it('should change color to red on toggle click', () => {
-    //     const { container, getAllByTestId } = render(<SearchBar />)
-
-    //     // Replace <YOUR_DIV_ID> by your component's id
-    //     const contentDiv = document.getElementById('<YOUR_DIV_ID>')
-    //     const style = window.getComputedStyle(contentDiv[0])
-    //     expect(style.color).toBe('blue') // Sometimes, only rgb st
-    // })
 })
