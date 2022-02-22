@@ -9,6 +9,7 @@ A solução foi implementada utizando o React JS, AntDesign, Jest, e TailWind.
 
 ## Prerequisites 
 - [Node](https://nodejs.org/pt-br/download/)
+- [Docker](https://www.docker.com/)
 
 ## Utilização com Docker
 Comandos para executar o projeto
