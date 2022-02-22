@@ -7,7 +7,7 @@ O Star Wars App é um simples web app que lista e realiza a pesquisa dos persona
 A aplicação utiliza a API Rest SWAPI para listar os personagens.
 A solução foi implementada utizando o React JS, AntDesign, Jest, e TailWind.
 
-## Prerequisites 
+## Pré requisitos
 - [Node](https://nodejs.org/pt-br/download/)
 - [Docker](https://www.docker.com/)
 
