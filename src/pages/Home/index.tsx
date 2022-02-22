@@ -15,14 +15,14 @@ function Home() {
     const [page, setPage] = useState(1)
     const [totalPages, setTotalPages] = useState(1)
 
-    async function retrievePersons() {
+    const retrievePersons = async () => {
         const data = await getByName(keyword, page)
         setPersons(data.results)
         setTotalPages(data.count)
         console.log(data)
     }
 
-    function changePage(page: number) {
+    const changePage = async (page: number) => {
         console.log(page)
         setPage(page)
     }
@@ -30,6 +30,7 @@ function Home() {
     const onSearch = (value: string) => {
         console.log(value)
         setKeyword(value)
+        setPage(1)
     }
 
     useEffect(() => {
@@ -38,7 +39,7 @@ function Home() {
 
     return (
         <div className="p-4 my-2">
-            <SearchBar setKeyword={setKeyword} />
+            <SearchBar onSearch={onSearch} />
             <Table rows={persons} />
             <Pagination
                 defaultCurrent={1}
