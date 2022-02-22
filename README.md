@@ -3,23 +3,50 @@
 
 ## Descrição
 
-O Star Wars App é um simple web app que lista e realiza a pesquisa dos personagens da famosa série Star Wars.
-A aplicação utiliza a SWAPI para listar os personagens.
+O Star Wars App é um simples web app que lista e realiza a pesquisa dos personagens da famosa série Star Wars.
+A aplicação utiliza a API Rest SWAPI para listar os personagens.
 A solução foi implementada utizando o React JS, AntDesign, Jest, e TailWind.
 
 ## Prerequisites 
 - [Node](https://nodejs.org/pt-br/download/)
 
-## Utilização
+## Utilização com Docker
 Comandos para executar o projeto
 
 Clone repository with branch main
 ```bash
-git clone https://github.com/gabrielripardo/psychonauts.git
+git clone https://github.com/gabrielripardo/starwars-app.git
 ```
 Open the repository of the directory
 ```bash
-cd psychonauts
+cd starwars-app
+```
+Run the command for create Docker Container 
+```bash
+docker build -t challenge-app:latest .
+```
+Await for node npm to complete the installation.
+
+Run the command for run the Container
+```
+docker run --name starwars-front -d -p 3000:3000 challenge-app:latest  
+```
+
+And now open the application in browser
+```
+http://localhost:3000
+```
+
+## Utilização sem o Docker
+Comandos para executar o projeto
+
+Clone repository with branch main
+```bash
+git clone https://github.com/gabrielripardo/starwars-app.git
+```
+Open the repository of the directory
+```bash
+cd starwars-app
 ```
 Run the command for install all dependencies
 ```bash
